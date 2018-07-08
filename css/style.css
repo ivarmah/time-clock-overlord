@@ -1,0 +1,77 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.row{
+	width: 90%;
+}
+
+#clock {
+	position: relative;
+	width: 600px;
+	height: 600px;
+	margin: 20px auto 0 auto;
+	background: url(images/clockface.jpg);
+	list-style: none;
+	}
+
+#sec, #min, #hour {
+	position: absolute;
+	width: 30px;
+	height: 600px;
+	top: 0px;
+	left: 285px;
+	}
+
+.static_speed{
+	background-color: #7B4EFF;
+	color: white;
+}
+
+#sec {
+	background: url(images/sechand.png);
+	z-index: 3;
+   	}
+
+#min {
+	background: url(images/minhand.png);
+	z-index: 2;
+   	}
+
+#hour {
+	background: url(images/hourhand.png);
+	z-index: 1;
+   	}
+
+p {
+    text-align: center;
+    padding: 10px 0 0 0;
+    }
+
+.navigation{
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+.options{
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+
+.navigation .btn{
+  margin: 1%;
+}
+
+
+.results{
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  margin-top: 1%;
+}

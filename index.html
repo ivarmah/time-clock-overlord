@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Time Machine</title>
+        <script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+        
+        <div class="row">
+            <div class="col-sm-7">
+                <ul id="clock">
+                    <li id="sec"></li>
+                    <li id="hour"></li>
+                    <li id="min"></li>
+                </ul>
+            </div>
+            <div class="col-sm-5" style="text-align: center; margin-top:5%;">
+                <div class="row">
+                    Cкорость изменений    <b><span class="change_speed"><b> 1000 </b></span> мс</b>
+                </div>
+                
+                <div class="row">
+                    Шаг изменений   <b>  <span class="change_step">0 </span> мс</b>
+                </div>
+                <div class="row">
+                    Выбранный режим работы: <b> <span class="clock_anomaly_name"> ускорение</span> </b>
+                </div>
+                <div class="row" style="margin-top:10%">
+                    <div class="constructor_form" style="display:none">
+                        <div class="form-group">
+                            <label for="email">Скорость (мс):</label>
+                            <input class="form-control" id="clock_speed" placeholder="Введите скорость секундной стрелки (мс)" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Шаг изменений (мс):</label>
+                            <input class="form-control" id="clock_speed_step" placeholder="Введите шаг изменения секундной стрелки (мс)" value="">
+                        </div>
+                        <button class="btn btn-success init_anomaly">
+                        <span class="glyphicon glyphicon-play"></span>
+                        Начать <span class="button_clock_anomaly_name"> ускорение</span>!
+                        </button>               
+                    </div>
+                </div>
+
+                <div class="row">  
+                    <button type="button" class="btn static_speed" style="display:none"> <span class="glyphicon glyphicon-pause"></span>  Оставить текущуюю скорость</button> </div>
+            </div>
+        </div>
+        
+        <div class='navigation'>
+            <button type="button" class="btn btn-primary slower"> <span class="glyphicon glyphicon-backward"></span> Медленнее</button>
+            <button type="button" class="btn btn-success faster"> <span class="glyphicon glyphicon-forward"></span> Быстрее</button>
+            <button type="button" class="btn btn-info random"> <span class="glyphicon glyphicon-random"></span> В случайном порядке</button>
+            <button type="button" class="btn btn-warning normal"><span class="glyphicon glyphicon-resize-horizontal"></span>  Нормальная скорость</button>
+            <button type="button" class="btn btn-danger stop"> <span class="glyphicon glyphicon-stop"></span> Остановить</button>
+        </div>
+
+        <div class='options'>
+            <button type="button" class="btn volume_off"> <span class="glyphicon glyphicon-volume-off"></span> Выключить звук </button>
+            <button type="button" class="btn volume_on" style="display:none"> <span class="glyphicon glyphicon-volume-up"></span>  Включить звук </button>
+        </div>
+
+
+        <audio id="audio-nav" class="tick_source" style="display:none">
+            <source src="audio/tick.wav"></source>
+        </audio>
+    </div>
+</body>
+</html>
